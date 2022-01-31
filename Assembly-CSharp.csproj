@@ -36,7 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/MapDestroyer.cs" />
      <Compile Include="Assets/RuleTile/RuleTile.cs" />
+     <Compile Include="Assets/Scripts/BoomBoom.cs" />
+     <Compile Include="Assets/Scripts/BombSpawner.cs" />
+     <Compile Include="Assets/Scripts/DeleteAnimation.cs" />
+     <Compile Include="Assets/Scripts/PrefabTile.cs" />
+     <Compile Include="Assets/Scripts/BombSpawnerTile.cs" />
+     <Compile Include="Assets/Scripts/BoomBoomTile.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/yup/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -256,6 +263,12 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>/home/yup/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.collections@1.1.0/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -265,8 +278,23 @@
     <Reference Include="Unity.Analytics.Editor">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.analytics@3.6.12/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Mdb">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Tracker">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.analytics@3.6.12/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.1/Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>/home/yup/Unity/Hub/Editor/2020.3.26f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -628,6 +656,9 @@
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Sysroot.Linux_x86_64">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
@@ -637,8 +668,17 @@
     <Reference Include="UnityEngine.Purchasing.SecurityStub">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Editor">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Toolchain.Linux-x86_64">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Networking.Editor">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Networking.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
@@ -652,8 +692,17 @@
     <Reference Include="UnityEngine.SpatialTracking">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Networking.Transport">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Networking.Transport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
@@ -673,8 +722,14 @@
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Monetization">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
@@ -684,6 +739,18 @@
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
         <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.SysrootPackage.Editor">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Editor">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-weaver.Editor">
+        <HintPath>/home/yup/Unity/Bomberman Starter Project/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
