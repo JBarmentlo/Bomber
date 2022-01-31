@@ -6,7 +6,6 @@ public class BoomBoom : MonoBehaviour
 {
     public  float           fuseTime    = 2.0f;
     public  MapDestroyer    mapDestroyer;
-    private bool            explode     = false;
 
     void Update()
     {

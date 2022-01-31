@@ -96,4 +96,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuseTime: 2
-  mapDestroyer: {fileID: 0}
+  explosionTile: {fileID: 11400000, guid: 6922648d271a2006a923416abe1beb4a, type: 2}
